@@ -1,0 +1,14 @@
+name: openvsp
+
+services:
+  openvsp:
+    build:
+      dockerfile: Dockerfile
+    devices:
+      - /dev/dri:/dev/dri:rwm
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ${HOME}/.Xauthority:/openvspuser/.Xauthority:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./Documents/:/home/openvspuser/Documents/:rw

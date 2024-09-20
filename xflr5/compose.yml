@@ -1,0 +1,17 @@
+name: xflr5
+
+services:
+  xflr5:
+    image: xflr5docker:latest
+    build:
+      dockerfile: Dockerfile
+    devices:
+      - /dev/dri:/dev/dri:rwm
+    environment:
+      - DISPLAY=${DISPLAY}
+      # - LIBGL_DEBUG=verbose
+    volumes:
+      - ${HOME}/.Xauthority:/xflr5user/.Xauthority:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./Documents/:/home/xflr5user/Documents/:rw
+      - ./config/:/home/xflr5user/.config/sourceforge.net/:rw

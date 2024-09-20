@@ -1,0 +1,16 @@
+name: openfoam
+
+services:
+  openfoam:
+    build:
+      dockerfile: Dockerfile
+    devices:
+      - /dev/dri:/dev/dri:rwm
+    tty: true
+    stdin_open: true
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ${HOME}/.Xauthority:/home/openfoam/.Xauthority:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./Documents/:/home/openfoam/Documents/:rw

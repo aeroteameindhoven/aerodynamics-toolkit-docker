@@ -10,9 +10,9 @@ RUN set -eux; \
     apt -y install openfoam12; \
     rm -rf /var/lib/apt/lists/*;
 
-RUN useradd -ms /bin/bash -G video openfoam
-USER openfoam
-WORKDIR /home/openfoam
+#RUN useradd -ms /bin/bash -G video openfoam
+#USER openfoam
+#WORKDIR /home/openfoam
 
 RUN echo ". /opt/openfoam12/etc/bashrc" >> .bashrc
 

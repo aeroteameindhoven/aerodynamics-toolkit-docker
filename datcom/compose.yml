@@ -1,7 +1,7 @@
-name: openvsp
+name: datcom
 
 services:
-  openvsp:
+  datcom:
     build:
       dockerfile: Dockerfile
     devices:

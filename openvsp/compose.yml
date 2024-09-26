@@ -11,4 +11,4 @@ services:
     volumes:
       - ${HOME}/.Xauthority:/openvspuser/.Xauthority:ro
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
-      - ./Documents/:/home/openvspuser/Documents/:rw
+      - ./Documents/:/home/ubuntu/Documents/:rw

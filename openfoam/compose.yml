@@ -11,6 +11,6 @@ services:
     environment:
       - DISPLAY=${DISPLAY}
     volumes:
-      - ${HOME}/.Xauthority:/home/openfoam/.Xauthority:ro
+      - ${HOME}/.Xauthority:/home/ubuntu/.Xauthority:ro
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
-      - ./Documents/:/home/openfoam/Documents/:rw
+      - ./Documents/:/home/ubuntu/Documents/:rw

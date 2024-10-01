@@ -11,8 +11,8 @@ RUN set -eux; \
     rm -rf /var/lib/apt/lists/*;
 
 #RUN useradd -ms /bin/bash -G video openfoam
-#USER openfoam
-#WORKDIR /home/openfoam
+USER ubuntu
+WORKDIR /home/ubuntu
 
 RUN echo ". /opt/openfoam12/etc/bashrc" >> .bashrc
 
